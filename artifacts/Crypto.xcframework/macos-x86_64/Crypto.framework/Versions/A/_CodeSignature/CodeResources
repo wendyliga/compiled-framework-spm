@@ -6,97 +6,65 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		ZN0eIL6ZekwVbhK8VOAWpbwWfZU=
+		1vZCs5I4ilIG6jTcGofo1xtpbDU=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/Logging-Swift.h</key>
+		<key>Headers/Crypto-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			2SWW7RqZo2ZQJ53PHDZNLGsF0kw=
-			</data>
 			<key>hash2</key>
 			<data>
-			j4xfy1N6TK7uVwtS7Q4gtZH8boIyLyMOZweCCHoIPkc=
+			6fiB5Dqm1iJ3cbFCiueY7ASYA8tC4dPkpeo6FGTzbhc=
 			</data>
 		</dict>
-		<key>Modules/Logging.swiftmodule/x86_64-apple-macos.swiftdoc</key>
+		<key>Modules/Crypto.swiftmodule/x86_64-apple-macos.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			NgOO2LzhILYTMxuoBT1vjT1NQq8=
-			</data>
 			<key>hash2</key>
 			<data>
-			IQSZtuBZdycsg8yfba7GFN+vKE8XD0bE92DtYkZItSU=
+			SBcoZmQimxOPMtMw7jGxPcx3QqXXf+NvohU6D1ZJ1ec=
 			</data>
 		</dict>
-		<key>Modules/Logging.swiftmodule/x86_64-apple-macos.swiftinterface</key>
+		<key>Modules/Crypto.swiftmodule/x86_64-apple-macos.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			HjFSUokmQFg+WD9j+1BDuTytHog=
-			</data>
 			<key>hash2</key>
 			<data>
-			ELk5PfuBhqOHNKub/xMDqlo5kKPVhndrJ/hHtXehHZc=
+			zImnDhUGaoy8J6ckD18HBGICIaqkCFCEaH0K/x2cAOo=
 			</data>
 		</dict>
-		<key>Modules/Logging.swiftmodule/x86_64-apple-macos.swiftmodule</key>
+		<key>Modules/Crypto.swiftmodule/x86_64-apple-macos.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			A4wLvjLA26M003XJSgq/hWG2QNQ=
-			</data>
 			<key>hash2</key>
 			<data>
-			DiEk2V+ixyH9VBIojYX9r9t4xn/FJtIHbEN5oUkLkI8=
+			ZR/j40Dv4y1g/aWobogTg6VLH6MyDfIXLDjR+CFHL68=
 			</data>
 		</dict>
-		<key>Modules/Logging.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/Crypto.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			NgOO2LzhILYTMxuoBT1vjT1NQq8=
-			</data>
 			<key>hash2</key>
 			<data>
-			IQSZtuBZdycsg8yfba7GFN+vKE8XD0bE92DtYkZItSU=
+			SBcoZmQimxOPMtMw7jGxPcx3QqXXf+NvohU6D1ZJ1ec=
 			</data>
 		</dict>
-		<key>Modules/Logging.swiftmodule/x86_64.swiftinterface</key>
+		<key>Modules/Crypto.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			HjFSUokmQFg+WD9j+1BDuTytHog=
-			</data>
 			<key>hash2</key>
 			<data>
-			ELk5PfuBhqOHNKub/xMDqlo5kKPVhndrJ/hHtXehHZc=
+			zImnDhUGaoy8J6ckD18HBGICIaqkCFCEaH0K/x2cAOo=
 			</data>
 		</dict>
-		<key>Modules/Logging.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/Crypto.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			A4wLvjLA26M003XJSgq/hWG2QNQ=
-			</data>
 			<key>hash2</key>
 			<data>
-			DiEk2V+ixyH9VBIojYX9r9t4xn/FJtIHbEN5oUkLkI8=
+			ZR/j40Dv4y1g/aWobogTg6VLH6MyDfIXLDjR+CFHL68=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ZN0eIL6ZekwVbhK8VOAWpbwWfZU=
-			</data>
 			<key>hash2</key>
 			<data>
-			XfvhhguWqIKFjP7KPYfrxAIFV20b7NrtN9rkN9+p46s=
+			8SVpobjV2jvLJgelXn9u7BDZRTmzhznz0oDMKCVHvXA=
 			</data>
 		</dict>
 	</dict>

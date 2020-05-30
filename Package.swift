@@ -27,8 +27,18 @@ let package = Package(
             dependencies: ["Logging"]
         ),
         .binaryTarget(
-            name: "Logging", 
-            path: "artifacts/Logging.xcframework"
+            name: "Logging",
+            url: "https://github.com/wendyliga/compiled-framework-spm/releases/download/0.0.1/Logging.xcframework.zip",
+            checksum: "c246c715ac7f6fae9ef0a89e758a8514644071a164985b1e95d344a684d84621"
+        ),
+        // .binaryTarget(
+        //     name: "Crypto",
+        //     url: "https://github.com/wendyliga/compiled-framework-spm/releases/download/0.0.1/Crypto.xcframework.zip",
+        //     checksum: "80ed5b65c5f79f43e94f7417bf6860a69552195399308f066d68930409156784"
+        // ),
+        .binaryTarget(
+            name: "Crypto", 
+            path: "artifacts/Crypto.xcframework"
         ),
         .testTarget(
             name: "compiled-framework-spmTests",

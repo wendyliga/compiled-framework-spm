@@ -8,7 +8,7 @@
 			<key>LibraryIdentifier</key>
 			<string>macos-x86_64</string>
 			<key>LibraryPath</key>
-			<string>Logging.framework</string>
+			<string>Crypto.framework</string>
 			<key>SupportedArchitectures</key>
 			<array>
 				<string>x86_64</string>

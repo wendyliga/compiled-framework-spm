@@ -1,0 +1,201 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target x86_64-apple-macos10.15 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Crypto
+@_exported import CryptoKit
+import Foundation
+import Swift
+@_hasMissingDesignatedInitializers @usableFromInline
+internal class EllipticCurvePoint {
+  @usableFromInline
+  internal var _basePoint: Swift.OpaquePointer
+  @usableFromInline
+  internal init(multiplying scalar: Crypto.ArbitraryPrecisionInteger, on group: Crypto.BoringSSLEllipticCurveGroup) throws
+  @objc deinit
+}
+extension EllipticCurvePoint {
+  @inlinable internal func withPointPointer<T>(_ body: (Swift.OpaquePointer) throws -> T) rethrows -> T {
+        return try body(self._basePoint)
+    }
+  @usableFromInline
+  internal func affineCoordinates(group: Crypto.BoringSSLEllipticCurveGroup) throws -> (x: Crypto.ArbitraryPrecisionInteger, y: Crypto.ArbitraryPrecisionInteger)
+}
+@usableFromInline
+internal class BoringSSLEllipticCurveGroup {
+  @usableFromInline
+  internal var _group: Swift.OpaquePointer
+  @usableFromInline
+  internal init(_ curve: Crypto.BoringSSLEllipticCurveGroup.CurveName) throws
+  @objc deinit
+}
+extension BoringSSLEllipticCurveGroup {
+  @usableFromInline
+  internal var coordinateByteCount: Swift.Int {
+    get
+  }
+  @usableFromInline
+  internal func makeUnsafeOwnedECKey() throws -> Swift.OpaquePointer
+  @inlinable internal func withUnsafeGroupPointer<T>(_ body: (Swift.OpaquePointer) throws -> T) rethrows -> T {
+        return try body(self._group)
+    }
+  @usableFromInline
+  internal var order: Crypto.ArbitraryPrecisionInteger {
+    get
+  }
+  @usableFromInline
+  internal var weierstrassCoefficients: (field: Crypto.ArbitraryPrecisionInteger, a: Crypto.ArbitraryPrecisionInteger, b: Crypto.ArbitraryPrecisionInteger) {
+    get
+  }
+}
+extension BoringSSLEllipticCurveGroup {
+  @usableFromInline
+  internal enum CurveName {
+    case p256
+    case p384
+    case p521
+    @usableFromInline
+    internal static func == (a: Crypto.BoringSSLEllipticCurveGroup.CurveName, b: Crypto.BoringSSLEllipticCurveGroup.CurveName) -> Swift.Bool
+    @usableFromInline
+    internal var hashValue: Swift.Int {
+      @usableFromInline
+      get
+    }
+    @usableFromInline
+    internal func hash(into hasher: inout Swift.Hasher)
+  }
+}
+extension BoringSSLEllipticCurveGroup.CurveName {
+  @usableFromInline
+  internal var baseNID: Swift.CInt {
+    get
+  }
+}
+@usableFromInline
+internal struct ArbitraryPrecisionInteger {
+  @usableFromInline
+  internal init()
+  @usableFromInline
+  internal init(_ original: Crypto.ArbitraryPrecisionInteger) throws
+  @usableFromInline
+  internal init(integerLiteral value: Swift.Int64)
+}
+extension ArbitraryPrecisionInteger {
+  @usableFromInline
+  internal static func _compare(lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Swift.CInt
+  @usableFromInline
+  internal var _positive: Swift.Bool {
+    get
+  }
+  @usableFromInline
+  internal func squared() -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal func positiveSquareRoot() throws -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal var byteCount: Swift.Int {
+    get
+  }
+}
+extension ArbitraryPrecisionInteger : Swift.Equatable {
+  @inlinable internal static func == (lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Swift.Bool {
+        return self._compare(lhs: lhs, rhs: rhs) == 0
+    }
+}
+extension ArbitraryPrecisionInteger : Swift.Comparable {
+  @inlinable internal static func < (lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Swift.Bool {
+        return self._compare(lhs: lhs, rhs: rhs) < 0
+    }
+  @inlinable internal static func <= (lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Swift.Bool {
+        return self._compare(lhs: lhs, rhs: rhs) <= 0
+    }
+  @inlinable internal static func > (lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Swift.Bool {
+        return self._compare(lhs: lhs, rhs: rhs) > 0
+    }
+  @inlinable internal static func >= (lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Swift.Bool {
+        return self._compare(lhs: lhs, rhs: rhs) >= 0
+    }
+}
+extension ArbitraryPrecisionInteger : Swift.ExpressibleByIntegerLiteral {
+  @usableFromInline
+  internal typealias IntegerLiteralType = Swift.Int64
+}
+extension ArbitraryPrecisionInteger : Swift.AdditiveArithmetic {
+  @inlinable internal static var zero: Crypto.ArbitraryPrecisionInteger {
+    get {
+        return 0
+    }
+  }
+  @usableFromInline
+  internal static func + (lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal static func += (lhs: inout Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger)
+  @usableFromInline
+  internal static func - (lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal static func -= (lhs: inout Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger)
+}
+extension ArbitraryPrecisionInteger : Swift.Numeric {
+  @usableFromInline
+  internal typealias Magnitude = Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal var magnitude: Crypto.ArbitraryPrecisionInteger.Magnitude {
+    get
+  }
+  @usableFromInline
+  internal static func * (lhs: Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger) -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal static func *= (lhs: inout Crypto.ArbitraryPrecisionInteger, rhs: Crypto.ArbitraryPrecisionInteger)
+  @inlinable internal init?<T>(exactly integer: T) where T : Swift.BinaryInteger {
+        fatalError("Not currently implemented")
+    }
+}
+extension ArbitraryPrecisionInteger : Swift.SignedNumeric {
+  @usableFromInline
+  internal mutating func negate()
+}
+extension Data {
+  @usableFromInline
+  internal mutating func append(bytesOf integer: Crypto.ArbitraryPrecisionInteger, paddedToSize paddingSize: Swift.Int) throws
+}
+extension ArbitraryPrecisionInteger : Swift.CustomDebugStringConvertible {
+  @usableFromInline
+  internal var debugDescription: Swift.String {
+    get
+  }
+}
+extension CryptoKitError {
+  @usableFromInline
+  internal static func internalBoringSSLError() -> CryptoKit.CryptoKitError
+}
+@usableFromInline
+internal class FiniteFieldArithmeticContext {
+  @usableFromInline
+  internal init(fieldSize: Crypto.ArbitraryPrecisionInteger) throws
+  @objc deinit
+}
+extension FiniteFieldArithmeticContext {
+  @usableFromInline
+  internal func square(_ input: Crypto.ArbitraryPrecisionInteger) throws -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal func multiply(_ x: Crypto.ArbitraryPrecisionInteger, _ y: Crypto.ArbitraryPrecisionInteger) throws -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal func add(_ x: Crypto.ArbitraryPrecisionInteger, _ y: Crypto.ArbitraryPrecisionInteger) throws -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal func subtract(_ x: Crypto.ArbitraryPrecisionInteger, from y: Crypto.ArbitraryPrecisionInteger) throws -> Crypto.ArbitraryPrecisionInteger
+  @usableFromInline
+  internal func positiveSquareRoot(_ x: Crypto.ArbitraryPrecisionInteger) throws -> Crypto.ArbitraryPrecisionInteger
+}
+@inlinable internal func openSSLSafeCompare<LHS, RHS>(_ lhs: LHS, _ rhs: RHS) -> Swift.Bool where LHS : Foundation.ContiguousBytes, RHS : Foundation.ContiguousBytes {
+    return lhs.withUnsafeBytes { lhsPtr in
+        rhs.withUnsafeBytes { rhsPtr in
+            constantTimeCompare(lhsPtr, rhsPtr)
+        }
+    }
+}
+@inlinable internal func constantTimeCompare<LHS, RHS>(_ lhs: LHS, _ rhs: RHS) -> Swift.Bool where LHS : Swift.Collection, RHS : Swift.Collection, LHS.Element == Swift.UInt8, RHS.Element == Swift.UInt8 {
+    guard lhs.count == rhs.count else {
+        return false
+    }
+
+    return zip(lhs, rhs).reduce(into: 0) { $0 |= $1.0 ^ $1.1 } == 0
+}
+extension Crypto.BoringSSLEllipticCurveGroup.CurveName : Swift.Equatable {}
+extension Crypto.BoringSSLEllipticCurveGroup.CurveName : Swift.Hashable {}
