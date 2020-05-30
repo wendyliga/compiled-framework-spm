@@ -1,3 +1,7 @@
-struct compiled_framework_spm {
-    var text = "Hello, World!"
+import Logging
+
+let logger = Logger(label: "com.example.compiledFramework")
+
+func foo() {
+    logger.info("foo called")
 }
